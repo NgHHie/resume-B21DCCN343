@@ -90,4 +90,25 @@ a {
         <p>© NgHHie. All rights reserved.</p>
     </footer>
 </body>
+<script>
+
+    function fadeIn(element) {
+        var op = 0.1;
+        element.style.opacity = 0;
+        element.style.display = 'block';
+        var timer = setInterval(function () {
+            if (op >= 1) {
+                clearInterval(timer);
+            }
+            element.style.opacity = op;
+            op += op * 0.1;
+        }, 20);
+    }
+
+    setTimeout(function () {
+        var popup = document.getElementById('popup');
+        fadeIn(popup);
+    }, 1500); 
+</script>
+
 </html>
